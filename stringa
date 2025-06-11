@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    //il char serve per indicare che è una stringa di caratteri
+    // nome[50]->a differenza del singolo char per una parola bisogna creare un'array[] con un numero di caratteri
+    //variabile nome contenente 50 righe
+    char nome[50];              // buffer per la stringa
+    printf("Come ti chiami? ");
+    
+    //fget->preleva la parola inserita (variabile nome)
+    //sizeof(nome)-> determina la lunghezza
+    //stdin->verifica che sia della lunghezza giusta, in questo caso max 50 lettere
+    if (fgets(nome, sizeof(nome), stdin) != NULL) {
+        
+        // rimuovo l'eventuale newline finale
+        //strcspn-> serve per rimuovere un determinato carattere dalla variabile
+        // ed in questo caso sostituisce \n con \0
+        nome[strcspn(nome, "\n")] = '\0';
+
+        // calcolo la lunghezza
+        //size_t->valoriziamo una variabile con il numero di lettere presenti
+        size_t len = strlen(nome);
+
+        // preparo un saluto concatenando due stringhe
+        char saluto[100] = "Ciao, ";
+        
+        //strncat->concatena variabile saluto,nome, 100-6-1 
+        //100(caratteri massimi contenuti) 
+        //6(numero caratteri della strnga saluto) 
+        //1(ultimo carattere nel caso avessero scritto \n)
+        strncat(saluto, nome, sizeof(saluto) - strlen(saluto) - 1);
+
+        //%s->si usa per le strnghe
+        //%zu->si usa per le lunghezze
+        // \n->serve per andare a capo
+        printf("%s! Il tuo nome contiene %zu caratteri.\n", saluto, len);
+    } else {
+        printf("Errore nella lettura del nome.\n");
+    }
+
+    return 0;
+}
