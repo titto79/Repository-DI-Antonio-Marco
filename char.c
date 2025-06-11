@@ -5,7 +5,7 @@ int main(void) {
     char c;
     printf("Inserisci un carattere: ");
     c = getchar();             // legge un singolo carattere da stdin
-    // ISUPPER->è minuscolo?
+    // ISUPPER->è magliuscolo?
     if (isupper((unsigned char)c)) {
         // se è una lettera maiuscola, la converto in minuscola
         //TOLOWER-> converte in minuscolo 
