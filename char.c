@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>   // per isupper, tolower
+#include <ctype.h>   // per isupper, tolower, toupper
 
 int main(void) {
     char c;
