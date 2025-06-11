@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(void) {
+    int    AnniPadre;
+    int    AnniFiglio;
+    char   NomePadre[20];
+
+    printf("qual'è il nome del Papà: ");
+    if (scanf("%19s", NomePadre) != 1) {  // %19s per evitare overflow
+        printf("Input non valido per il nome.\n");
+        return 1;
+    }
+    
+    
+    printf("Quanti anni ha il Papà: ");
+    if (scanf("%d", &AnniPadre) != 1) {
+        printf("Input non valido per l'età.\n");
+        return 1;
+    }
+
+    printf("Quanti anni ha il Figlio: ");
+    if (scanf("%d", &AnniFiglio) != 1) {
+        printf("Input non valido per l'età.\n");
+        return 1;
+    }
+    
+    
+    
+    int sommaEta(int a,int b){
+        int somma=a+b;
+        return somma;
+    }
+    
+    int somma=sommaEta(AnniPadre,AnniFiglio);
+    
+     printf("il nome del Papà è  : %s\n", NomePadre);
+     printf("la somma delle età padre figlioè  : %d\n", somma);
+   
+
+    return 0;
+
+}
