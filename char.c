@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>   // per isupper, tolower, toupper
+#include <ctype.h>   // per isupper, islower, tolower, toupper
 
 int main(void) {
     char c;
@@ -11,6 +11,7 @@ int main(void) {
         //TOLOWER-> converte in minuscolo 
         char lower = tolower((unsigned char)c);
         printf("Hai inserito una maiuscola. In minuscolo diventa: %c\n", lower);
+      //ISLOWER->è minuscolo?     
     } else if (islower((unsigned char)c)) {
         // se è una lettera minuscola, la converto in maiuscola
         //TOUPPER-> converte in magliuscolo
