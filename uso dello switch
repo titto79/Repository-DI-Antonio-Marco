@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int operazione(int a, int x, int y) {
+    switch (a) {
+        case 1:
+            int somma=x + y;
+            return somma;  // Restituisce la somma
+        case 2:
+            int sottrazione=x - y;
+            return x - y;  // Restituisce la differenza
+        default:
+            printf("Operazione non valida\n");
+            return 0;
+    }
+}
+
+int main() {
+    int n1, n2;
+
+    printf("Inserisci il 1° Numero: ");
+    if (scanf("%d", &n1) != 1) {
+        printf("Input non valido.\n");
+        return 1;
+    }
+
+    printf("Inserisci il 2° Numero: ");
+    if (scanf("%d", &n2) != 1) {
+        printf("Input non valido.\n");
+        return 1;
+    }
+
+    int risultato = operazione(1, n1, n2);
+    int risultato2 = operazione(2, n1, n2);
+
+    if (risultato > 1 && risultato2 < 3) {
+        printf("La somma è maggiore di 1: %d\n", risultato);
+        printf("La differenza è minore di 3: %d\n", risultato2);
+    } else {
+        puts("Non rientra nella casistica");
+    }
+
+    return 0;
+}
