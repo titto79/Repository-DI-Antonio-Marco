@@ -1,0 +1,31 @@
+//op.Aritmetici
+somma (+)
+sottrazione (-)
+moltiplicazione (*)
+divisione (/)
+resto (%)
+
+// Op. Incremento e Decremento
+aumenta di 1 (++x) (prima aumenta di 1 e poi stampa la x es partenza x=2 ++x stamperà 3)
+diminuisce di 1 (--x) (prima diminuisce di 1 e poi stampa la x es partenza x=2 --x stamperà 1)
+
+aumenta di 1 (x++) (prima stampa la x e poi aumenta di 1 es partenza x=2 x++ stamperà 2 e poi aumenterà a 3)
+diminuisce di 1 (x--) (prima stampa la x e poi diminuisce di 1 es partenza x=2 x++ stamperà 2 e poi diminuira a 1)
+
+//Op. relazionali
+valori boleani (0) o (1)
+uguale (==)
+diverso (!=)
+maggiore (>)
+minore (<)
+maggiore o uguale (>=)
+minore o uguale (<=)
+
+//Op.Logici
+and (&&)
+or (||)
+negazione (!)
+
+//Op.di assegnazione
+valori a variabili assegnazione semplice (=)
+forme combinate (+=) (-=) (*=)
