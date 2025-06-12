@@ -1,3 +1,8 @@
+//In C, la funzione puts() serve per stampare una stringa sullo schermo e aggiungere automaticamente 
+//un ritorno a capo (\n) alla fine.
+//La differenza principale con printf() è che puts() è più semplice perché non richiede specificatori 
+//di formato (%s, %d, ecc.), ma può solo stampare stringhe.
+
 #include <stdio.h>
 #include <stdbool.h>
 
