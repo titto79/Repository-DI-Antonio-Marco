@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void) {
+   int n1,n2;
+    printf("Inserisci il 1° Numero: ");
+    if (scanf("%d", &n1) != 1) {
+        printf("Input non valido.\n");
+        return 1;
+    }
+     printf("Inserisci il 2° Numero: ");
+    if (scanf("%d", &n2) != 1) {
+        printf("Input non valido.\n");
+        return 1;
+    }
+   int som=n1+n2;
+   int dif=n1-n2;
+   int prod=n1*n2;
+   int quoz=n1/n2;
+   int rest=n1%n2;
+   
+   if (som>1 && dif<3){
+       printf("la somma è maggiore di 1 cioè %d\n",som);
+       printf("la differenza è minore di 3 cioè %d\n",dif);
+   } else{
+       puts("Non rientra nella casistica");
+   }
+   
+   if (prod<2 || quoz>3){
+       printf("la somma è %d\n",som);
+       printf("la differenza è %d\n",dif);
+   } else{
+       puts("Non rientra nella casistica");
+   }
+   
+   printf("la resto tra A e B è %d\n",rest);
+
+    return 0;
+
+}
