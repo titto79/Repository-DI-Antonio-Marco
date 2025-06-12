@@ -38,14 +38,12 @@ int main(void) {
     
     float calcolo=Media(N1,N2,N3);
     
-    printf("il nome della Città è: %s\n", NomeCitta);
-    
     if (calcolo<6){
-        printf("la Media è  : %f è minore di 6", calcolo);
+        printf("la Media dei tre numeri a %s è %f è minore di 6",NomeCitta, calcolo);
     }else if(calcolo==6){
-        printf("la Media è  : %f  è uguale a 6", calcolo);
+        printf("la Media dei tre numeri a %s è %f è uguale a 6",NomeCitta, calcolo);
     }else{
-         printf("la Media è  : %f è Maggiore di 6", calcolo);
+         printf("la Media dei tre numeri a %s è %f  è Maggiore di 6",NomeCitta, calcolo);
     }
      
     return 0;
