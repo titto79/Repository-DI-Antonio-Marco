@@ -21,12 +21,17 @@ int main() {
     } else {
         printf("Il numero NON è compreso tra 1 e 100.\n");
     }
+
+
 //SECONDO Esempio
     char password[20];
 
     printf("Inserisci la password: ");
     scanf("%19s", password);
 
+    // strcmp fa la comparazione tra il valore della variabile variabile
+    // e la parola SEGRETO. se è uguale restituisce un valore 0 e lo confronta con 
+    // ==0
     if (strcmp(password, "segreto") == 0) {
         printf("Accesso consentito.\n");
     } else {
