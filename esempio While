@@ -12,3 +12,26 @@ int main(void) {
     printf("Fine ciclo while\n");
     return 0;
 }
+------------------------------
+#include <stdio.h>
+
+int main() {
+    int valore;
+    int calcolo=0;
+    int zero=1;
+    
+    while (zero!=0){
+        printf("Inserisci un valore intero:\n");
+        scanf("%d",&valore);
+        if (valore>0){
+            calcolo=calcolo+valore;
+        }else if (valore<0){
+            printf("Hai inserito un valore negativo!!");
+        }else{
+            // zero=0;
+            break;
+        }
+    }
+    printf("la somma dei valori è:%d",calcolo);
+    return 0;    
+}
