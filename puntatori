@@ -36,8 +36,10 @@ int main(void) {
 #include <stdio.h>
 
 int main() {
+    // dichiaro delle variabili di tipo Int
     int a, b, temp;
-    int *pa, *pb;
+    // dichiaro dei puntatori (i puntatori si dichiarano con * davanti al nome_variabile)
+    int *puntatore1,*puntatore2;
 
     // 1. Inserimento valori
     printf("Inserisci il primo numero: ");
@@ -47,29 +49,34 @@ int main() {
     scanf("%d", &b);
 
     // 2. Puntatori
-    pa = &a;
-    pb = &b;
+    // associo i puntatori1 e 2 alle variabili a e b (per l'associazione si usa &)
+    puntatore1 = &a;
+    puntatore2 = &b;
 
     // 3. Stampa valori prima dello scambio
     printf("Prima dello scambio: a = %d, b = %d\n", a, b);
 
     // Scambio valori tramite puntatori
-    temp = *pa;
-    *pa = *pb;
-    *pb = temp;
+    // temp è una semplice variabile in cui poggiamo il valore scaturito dall'associazione precedente
+    // poggiamo il valore risultante nella memoria (*puntatore1) 
+    temp = *puntatore1;
+    // ora mettimo nel puntatore1 il contenuto del puntatore2
+    *puntatore1 = *puntatore2;
+    //ora porto il valore poggiato in temp nel puntatore2
+    *puntatore2 = temp;
 
     // 4. Stampa valori dopo lo scambio
     printf("Dopo lo scambio: a = %d, b = %d\n", a, b);
 
     // 5. Calcola la somma usando i puntatori
-    int somma = *pa + *pb;
+    int somma = *puntatore1 + *puntatore2;
     printf("La somma dei due numeri (dopo lo scambio) è: %d\n", somma);
 
     // 6. Determina il maggiore usando i puntatori
-    if (*pa > *pb) {
-        printf("Il maggiore è: %d\n", *pa);
-    } else if (*pa < *pb) {
-        printf("Il maggiore è: %d\n", *pb);
+    if (*puntatore1 > *puntatore2) {
+        printf("Il maggiore è: %d\n", *puntatore1);
+    } else if (*puntatore1 < *puntatore2) {
+        printf("Il maggiore è: %d\n", *puntatore2);
     } else {
         printf("I numeri sono uguali.\n");
     }
